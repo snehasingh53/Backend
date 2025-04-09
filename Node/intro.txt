@@ -1,0 +1,7 @@
+node.js  with v8 engine is written in C++, that is why it compiles JS to machine code 
+
+-> adds more features to js like -> read and write on a computer , connect to a database , act as a server for content 
+
+
+
+the role 
