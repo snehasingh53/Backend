@@ -1,0 +1,41 @@
+A professional-looking DOCX document with:
+
+Formatted title and headings
+
+Random paragraphs of text
+
+Bullet points and numbered lists
+
+A data table with random values
+
+Space for an image (uncomment to use)
+
+A footer with generation date
+
+Customization options:
+Change the filename by passing a different parameter
+
+Adjust the number of paragraphs, list items, or table rows
+
+Add more sections or different elements as needed
+
+The resulting document will look like a real business document with varied content and formatting.
+
+readStream.on('data',(chunk)=>{// on is an event listener
+    console.log('------- NEW CHUNK------');
+    console.log(chunk);
+    writeStream.write('/n New Chunk');
+    writeStream.write(chunk);
+}) what is wrong in this code
+There are a few issues with your code snippet. Here's what's wrong and how to fix it:
+
+Issues:
+String Literal Syntax: You're using /n instead of \n for a new line
+
+Path Separator: Forward slashes in strings don't need to be escaped (but \n does)
+
+Error Handling: Missing error event handlers for both streams
+
+Stream Management: No handling for backpressure (when write can't keep up with read)
+
+Encoding: Chunks might be buffers that should be converted to strings
